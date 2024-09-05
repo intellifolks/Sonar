@@ -3,7 +3,7 @@ pipeline {
     
 
     environment {
-        JAVA_HOME = "/usr/lib/jvm/java-11-openjdk-amd64"
+        JAVA_HOME = "/usr/lib/jvm/java-17-openjdk-amd64"
         NEXUS_VERSION = "NEXUS3"
         NEXUS_PROTOCOL = "http"
         NEXUS_URL = "13.232.201.1:8081"
@@ -23,7 +23,7 @@ pipeline {
             
             steps {
 
-                sh 'export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64 && mvn verify package'
+                sh 'export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64 && mvn verify package'
             }
         }
 
@@ -31,7 +31,7 @@ pipeline {
             
             steps {
                 
-                       sh 'export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64 && mvn test'
+                       sh 'export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64 && mvn test'
                    
                
             }
